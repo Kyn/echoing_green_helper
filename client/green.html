@@ -28,7 +28,7 @@
       <div class="col-xs-12">
         <div class="intro">
           <div class="container">
-          A simple tool to help you with your Echoing Green <a href="http://www.echoinggreen.org/fellowship/apply" class="apply" target="_blank">Fellowship application</a><span class="pull-right text-muted"><small>*This site is not affiliated with Echoing Green</small></span>
+          A simple tool to help you with your Echoing Green <a href="http://www.echoinggreen.org/fellowship/apply" class="dotted" target="_blank">Fellowship application</a><span class="pull-right text-muted"><small>*This site is not affiliated with Echoing Green</small></span>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@
             </div>
             <div class="col-md-4 hidden-xs hidden-sm">
               <div class="kyn">
-                A sincere thank you for using your talents to make the world a better place <i class="fa fa-smile-o"></i>
+                Thank you for using your talents to make the world a better place <i class="fa fa-smile-o"></i>
               </div>
             </div>
           </div>
@@ -70,9 +70,10 @@
                 A few things to note:
                 <ol>
                   <li>THIS IS NOT THE APPLICATION FORM!</li>
-                  <li>This is a simple tool we created on a rainy Saturday morning to help you get your character limits dialed in</li>
-                  <li>You'll eventually apply <a href="http://www.echoinggreen.org/fellowship/apply">here</a>.</li>
-                  <li>For privacy and security purposes, we do not save any of the information you enter. Your browswer will save the information locally however, allowing you to return at your leisure.</li>
+                  <li>This is simply a tool to help you get your character limits dialed in</li>
+                  <li>You'll eventually apply <a class="dotted" href="http://www.echoinggreen.org/fellowship/apply">here</a>.</li>
+                  <li>For privacy and security purposes, we do not save any of the information you enter.</li>
+                  <li>Your browser saves the information locally, or you can print it when you're done.</li>
                   <li>As with all open source software, use at your own risk.</li>
                 </ol>
               </div>
@@ -83,6 +84,7 @@
       </div>
     </div>
   </div>
+  {{> footer}}
 </template>
 
 <template name="worksheet">
@@ -202,4 +204,22 @@
     </div>
 
   </form>
+</template>
+
+<template name="footer">
+  <footer>
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span8 offset2">
+          <div class="text-center"><p><h4>Built on a rainy Saturday morning by your friends at</h4></p><p><a class="logo" href="https://kyn.me"><img src="/kyn.png"></a></p>
+          </div>
+          <div class="text-center" style="margin-top:50px;"><p><h4>Open Source</h4></p><p>The source code for this app can be found on <a class="dotted" href="https://www.github.com/kyn/green">Github</a></p>
+          </div>
+          <div class="text-center" style="margin-top:50px;">
+            <p><h4>Good Luck!</h4></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
