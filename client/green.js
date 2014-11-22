@@ -1,3 +1,7 @@
+UI.registerHelper('session', function(name) {
+    return Session.get(name);
+});
+
 Template.layout.rendered = function () {
 
   var date = new Date(2014, 11, 02);
@@ -30,9 +34,9 @@ Template.layout.events({
     var id = event.target.id;
     var val = $(event.target).val();
     Session.setPersistent(id, val);
+  },
+  'click .js-partnerships': function (event) {
+    $('.partnerships').toggle();
   }
-});
 
-UI.registerHelper('session', function(name) {
-    return Session.get(name);
 });

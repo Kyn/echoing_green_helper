@@ -67,6 +67,7 @@ ol li:first-child {
   margin-top: 10px;
 }
 label {
+  padding-left: 0px !important;
   margin-top: 50px;
 }
 .text-muted {
@@ -74,6 +75,9 @@ label {
 }
 textarea.form-control {
   padding: 20px;
+}
+.partnerships {
+  display: none;
 }
 .bulb {
   background-image: url('/bulb.png');
