@@ -1,3 +1,15 @@
+Template.layout.rendered = function () {
+
+  var date = new Date(2014, 11, 02);
+  var now = new Date();
+  var diff = (date.getTime()/1000) - (now.getTime()/1000);
+
+  var clock = $('.clock').FlipClock(diff, {
+        clockFace: 'DailyCounter',
+        countdown: true
+    });
+};
+
 Template.layout.events({
   'keypress textarea, keyup textarea': function (event) {
     function count(){

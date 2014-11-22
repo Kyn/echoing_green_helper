@@ -14,10 +14,49 @@ body {
   background-repeat: no-repeat;
   color:#42494e;
   font-size: 18px;
+}
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+.intro {
+  height: 100px;
+  line-height: 100px;
+}
+a.apply {
+  color: inherit;
+  text-decoration: underline;
+}
+a.kyn-link {
+  color: #95b7c3;
+}
+.countdown {
+  padding: 100px 0;
+  background-color: #ff8756;
+  color: white;
+  font-size: 1.5em;
+}
+.clock {
   margin-top: 50px;
+}
+.kyn {
+  text-shadow: 1px 1px #f15755;
+  text-align: center;
+}
+.signature {
+  padding: 25px;
+  background-color: #95b7c3;
+  color: white;
+  font-size: 1.0em;
+}
+.logo {
+  width: 50px;
 }
 .worksheet-wrapper {
   padding: 100px 0;
+}
+ol li:first-child {
+  margin-top: 10px;
 }
 label {
   margin-top: 50px;
