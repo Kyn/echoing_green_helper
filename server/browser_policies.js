@@ -11,7 +11,7 @@ Meteor.startup (function () {
   BrowserPolicy.content.allowConnectOrigin(rootUrl);
   BrowserPolicy.content.allowConnectOrigin(rootUrl.replace(/http(s?)/, 'ws$1'));
   //Allow DDP connections for staging server currently using Meteor's free hosting
-  if (rootUrl == 'http://staging.kyn.me') {
+  if (rootUrl == 'http://egf.meteor.com') {
     BrowserPolicy.content.allowConnectOrigin("https://*.meteor.com");
     BrowserPolicy.content.allowConnectOrigin("wss://*.meteor.com");
   }
