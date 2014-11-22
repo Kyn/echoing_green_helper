@@ -1,1 +1,41 @@
-/* CSS declarations go here */
+html, body {
+  height: 100%;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: -webkit-gradient(linear, left top,right top,color-stop(0,#fcfcfc),color-stop(0.25,#efefde),color-stop(1,#d4e6f2));
+  /*background-image:-webkit-linear-gradient(left,#fcfcfc 0%,#efefde 25%,#d4e6f2 100%);*/
+  background-image: -webkit-linear-gradient(bottom,#fcfcfc 0%,#efefde 25%,#d4e6f2 100%);
+  background-image: -moz-linear-gradient(bottom,#fcfcfc 0%,#efefde 25%,#d4e6f2 100%);
+  background-image: -o-linear-gradient(bottom,#fcfcfc 0%,#efefde 25%,#d4e6f2 100%);
+  background-image: -ms-linear-gradient(bottom,#fcfcfc 0%,#efefde 25%,#d4e6f2 100%);
+  background-image: linear-gradient(bottom,#fcfcfc 0%,#efefde 25%,#d4e6f2 100%);
+  background-color: #fcfcfc;
+  background-repeat: no-repeat;
+  color:#42494e;
+  font-size: 18px;
+  margin-top: 50px;
+}
+.worksheet-wrapper {
+  padding: 100px 0;
+}
+label {
+  margin-top: 50px;
+}
+.text-muted {
+  color: #bbb;
+}
+textarea.form-control {
+  padding: 20px;
+}
+.bulb {
+  background-image: url('/bulb.png');
+  background-repeat: no-repeat;
+  width: 187px;
+  height: 320px;
+  position: fixed;
+  bottom: 100px;
+  right: 90px;
+  opacity: 0.1;
+  z-index: -1;
+}

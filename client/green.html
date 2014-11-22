@@ -1,14 +1,160 @@
 <head>
-  <title>green</title>
+<!--[if lt IE 10]>
+    <script type="text/javascript">
+      window.onload = function(){
+        var div = document.createElement('div');
+        div.innerHTML = "<p>Sorry, your browser is an outdated version of Internet Explorer and will likely not place nice with some of the modern technologies used in the making of this site</p><p>If you'd still like to ensure this site works properly, may we suggest using an alternative browser such as Chrome or Firefox.</p>";
+        div.style.padding = '25px';
+        div.style.backgroundColor = '#f15755';
+        div.style.color = 'white';
+        document.body.appendChild(div);
+      }
+    </script>
+  <![endif]-->
+  <title>Welcome</title>
+  <meta name="description" content="A simple app to help you with your Echoing Green Fellowship application">
+  <link href="http://fonts.googleapis.com/css?family=Raleway&subset=latin" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  {{> layout}}
+  <div class="bulb"></div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="layout">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="intro">
+          This is some intro text
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="worksheet-wrapper">
+          {{> worksheet}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="worksheet">
+  <form role="form">
+    <div class="form-group">
+      <label class="col-xs-12" for="q1">1. Summarize your organization’s mission in one sentence. <span class="text-muted pull-right">(150 characters)</span></label>
+      <textarea class="form-control" id="q1" rows="1" data-limit="150">{{session 'q1'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q2">2. Summarize your organization’s mission and activities in one paragraph. <span class="text-muted pull-right">(500 characters)</span></label>
+      <textarea class="form-control" id="q2" rows="3" data-limit="500">{{session 'q2'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q3">3. Describe the specific problem your organization is working to solve. Use statistics and references to identify the size and scope of the problem. <span class="text-muted pull-right">(500 characters)</span></label>
+      <textarea class="form-control" id="q3" rows="3" data-limit="500">{{session 'q3'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q4">4. Describe the specific programs or products of your organization. <span class="text-muted pull-right">(1000 characters)</span></label>
+      <textarea class="form-control" id="q4" rows="6" data-limit="1000">{{session 'q4'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q5">5. How is your approach boldly innovative compared to the status quo? <span class="text-muted pull-right">(1000 characters)</span></label>
+      <textarea class="form-control" id="q5" rows="6" data-limit="1000">{{session 'q5'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q6">6. In what way will the lives of specific individuals be better because of your organization’s work? Please identify the group(s) of individuals and how many lives will be impacted by your organizations work over time? <span class="text-muted pull-right">(1000 characters)</span></label>
+      <textarea class="form-control" id="q6" rows="6" data-limit="1000">{{session 'q6'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12">7. Budget Questions</label>
+      <hr class="col-xs-12" style="margin-top:10px">
+    </div>
+
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q7a" style="margin-top:25px">a. In total, how much money have you raised for this organization from launch to date</label>
+      <div class="col-xs-2">
+        <input class="form-control" id="q7a" value="{{session 'q7a'}}" placeholder="$USD">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q7b">b. List the names of any individuals or organizations who have provided greater than $10,000 in funding to date <span class="text-muted pull-right">(250 characters)</span></label>
+      <textarea class="form-control" id="q7b" rows="2" data-limit="250">{{session 'q7b'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q7c">c. How much money do you hope to spend in 2015</label>
+      <div class="col-xs-2">
+        <input class="form-control" id="q7c" value="{{session 'q7c'}}" placeholder="$USD">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q7d2">d. Approximately how much money do you think you might need to spend in 2 years (2017) and in 5 years (2020)</label>
+      <div class="col-xs-2">
+        2 years: <input class="form-control" id="q7d2" value="{{session 'q7d2'}}" placeholder="$USD">
+      </div>
+      <div class="col-xs-2">
+        5 years:<input class="form-control" id="q7d5" value="{{session 'q7d5'}}" placeholder="$USD">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q7e">e. What do you hope will be your main sources of funding over the next two years? <span class="text-muted pull-right">(500 characters)</span></label>
+      <textarea class="form-control" id="q7e" rows="3" data-limit="500">{{session 'q7e'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q8">8. When and how did you come up with the idea for your organization? Please list anyone who could be considered a co-founder? <span class="text-muted pull-right">(500 characters)</span></label>
+      <textarea class="form-control" id="q8" rows="3" data-limit="500">{{session 'q8'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q9">9. Why are you, unlike the majority of people, so passionate about this issue that you are willing to take the risky leap of starting a new organization? <span class="text-muted pull-right">(1000 characters)</span></label>
+      <textarea class="form-control" id="q9" rows="6" data-limit="1000">{{session 'q9'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q10">10. What skills or experiences demonstrate that you will be able to attract money, people, and other resources to your organization? <span class="text-muted pull-right">(1000 characters)</span></label>
+      <textarea class="form-control" id="q10" rows="6" data-limit="1000">{{session 'q10'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q11">11. Describe one example of your bold, entrepreneurial spirit <span class="text-muted pull-right">(750 characters)</span></label>
+      <textarea class="form-control" id="q11" rows="5" data-limit="750">{{session 'q11'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q12">12. Provide one or two examples of your ability to overcome challenges and adversity.  <span class="text-muted pull-right">(1000 characters)</span></label>
+      <textarea class="form-control" id="q12" rows="6" data-limit="1000">{{session 'q12'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-12" for="q13">13. If you have previously applied for an Echoing Green Fellowship for this or any similar idea, what has changed since you last applied? <span class="text-muted pull-right">(500 characters)</span></label>
+      <textarea class="form-control" id="q13" rows="3" data-limit="500">{{session 'q13'}}</textarea>
+      <p class="help-block pull-right"></p>
+    </div>
+
+  </form>
 </template>

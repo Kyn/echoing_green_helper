@@ -1,23 +1,26 @@
-if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("counter", 0);
-
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get("counter");
+Template.layout.events({
+  'keypress textarea, keyup textarea': function (event) {
+    function count(){
+    var val = $.trim($(event.target).val()), // Remove spaces from b/e of string
+      chars = val.length,
+      parent = $(event.target).parents('.form-group');
+      limit = $(event.target).data('limit');
+      parent.find('.help-block').html( chars +' / '+ limit);
+      if (chars > limit) {
+        parent.addClass('has-error');
+      } else {
+        parent.removeClass('has-error');
+      }
     }
-  });
+    count();
+  },
+  'blur textarea, blur input': function (event) {
+    var id = event.target.id;
+    var val = $(event.target).val();
+    Session.setPersistent(id, val);
+  }
+});
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set("counter", Session.get("counter") + 1);
-    }
-  });
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
-}
+UI.registerHelper('session', function(name) {
+    return Session.get(name);
+});
