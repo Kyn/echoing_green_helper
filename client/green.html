@@ -17,13 +17,13 @@
 </head>
 
 <body>
-  <a href="https://github.com/kyn"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+  <a href="https://github.com/kyn" class="no-print"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
   {{> layout}}
-  <div class="bulb"></div>
+  <div class="bulb no-print"></div>
 </body>
 
 <template name="layout">
-  <div class="container">
+  <div class="container no-print">
     <div class="row">
       <div class="col-xs-12">
         <div class="intro">
@@ -34,7 +34,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row no-print">
     <div class="col-xs-12">
       <div class="countdown">
         <div class="container">
@@ -53,7 +53,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row no-print">
     <div class="col-xs-12">
       <div class="signature text-center">
         Made with <span class="glyphicon glyphicon-heart" style="color:#f15755" aria-hidden="true"></span> from your friends at <a class="kyn-link" href="https://kyn.me" target="_blank"><img class="logo" src="kyn.png"></a>
@@ -63,8 +63,8 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <div class="worksheet-wrapper">
-          <div class="row">
+        <div id="download" class="worksheet-wrapper">
+          <div class="row no-print">
             <div class="col-xs-12">
               <div class="well">
                 A few things to note:
@@ -220,16 +220,27 @@
         <p class="help-block pull-right"></p>
       </div>
     </div>
+    <div class="well well-finished" style="margin-top: 100px">
+      <h3>THAT'S IT!</h3>
+      <hr class="finished">
+      <div class="form-group">
+        <label>1) The information is saved in your browser, so come back to this page any time.</label>
+      </div>
+      <div class="form-group">
+        <label for="print">2) Print out your answers for safe keeping</label>
+        <a href="javascript:window.print()" type="submit" id="print" class="btn btn-info">Print</a>
+      </div>
+    </div>
 
   </form>
 </template>
 
 <template name="footer">
-  <footer>
+  <footer class="no-print">
     <div class="container">
       <div class="row-fluid">
         <div class="span8 offset2">
-          <div class="text-center"><p><h4>Built on a rainy Saturday morning by your friends at</h4></p><p><a class="logo" href="https://kyn.me"><img src="/kyn.png"></a></p>
+          <div class="text-center"><p><h4>Built on a rainy Saturday by your friends at</h4></p><p><a class="logo" href="https://kyn.me"><img src="/kyn.png"></a></p>
           </div>
           <div class="text-center" style="margin-top:50px;"><p><h4>Open Source</h4></p><p>The source code for this app can be found on <a class="dotted" href="https://www.github.com/kyn/green">Github</a></p>
           </div>

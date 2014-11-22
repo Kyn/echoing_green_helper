@@ -38,5 +38,5 @@ Template.layout.events({
   'click .js-partnerships': function (event) {
     $('.partnerships').toggle();
   }
-
 });
+

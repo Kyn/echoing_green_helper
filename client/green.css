@@ -79,6 +79,13 @@ textarea.form-control {
 .partnerships {
   display: none;
 }
+hr.finished {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #fff;
+}
+.well-finished label {
+  margin-top: 0px;
+}
 .bulb {
   background-image: url('/bulb.png');
   background-repeat: no-repeat;
@@ -98,5 +105,32 @@ footer {
   font-size: .8em;
   min-height: 75px;
   margin-top: 200px;
+}
+
+@media print
+{
+  .no-print, .no-print *
+  {
+      display: none !important;
+  }
+  body {
+    font-size: 1em !important;
+    font-weight: normal !important;
+    font-family: sans-serif;
+  }
+  textarea {
+    font-size: .8em !important;
+    padding: none !important;
+    border: none !important;
+    overflow: visible !important;
+    outline: none !important;
+
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
 }
 
