@@ -4,7 +4,7 @@ UI.registerHelper('session', function(name) {
 
 Template.layout.rendered = function () {
 
-  var date = new Date(Date.UTC(2014, 12, 05, 19, 0, 0 ));
+  var date = new Date(Date.UTC(2019, 9, 16, 18, 0, 0 ));
   var now = new Date();
   var diff = (date.getTime()/1000) - (now.getTime()/1000);
 
