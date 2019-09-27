@@ -1,10 +1,13 @@
-####A simple tool to help you with your 2015 Echoing Green Fellowship application####
+#### A simple tool to help you with your ~~2015~~ 2020 Echoing Green Fellowship application ####
 
-Really, it was just an excuse to play around with Meteor on an otherwise rainy Saturday in Chicago
+Really, it was just an excuse to play around with Meteor.js on an otherwise rainy Saturday in Chicago
+
+1. Install [Meteor](https://www.meteor.com/install)
+2. `meteor run`
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Chad Kruse, The Kyn Project
+Copyright (c) 2014, 2019 Chad Kruse
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
